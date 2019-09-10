@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<script type="text/javascript">
+		alert("onload 1");
 		function unescapeHtml(escaped_str) {
 		    var div = document.createElement('div');
 		    div.innerHTML = escaped_str;
@@ -27,11 +28,13 @@
 			return '/';
 		}
 			window.onload = function() {
-				var a = "open?link_click_id=699850471194328071";
+				alert("onload");
+				var a = "open?link_click_id=700042400868501507";
 				var b = "funnyquote://";
 
 				var fallbackFunction = function() {
 					if (document.webkitHidden || document.hidden) { return; }
+					alert("fallback");
 					window.top.location.replace(validate("market://details?id=com.justfun.funnyquotes"));
 				};
 				var addIFrame = function() {
@@ -49,15 +52,22 @@
 						addIFrame();
 						setTimeout(fallbackFunction, 750-250);
 					};
+					alert("Chrome");
 					setTimeout(setURIFunction, 250);
 					return;
 				}
 				else if (navigator.userAgent.match("KAKAO") ||
 							navigator.userAgent.match("NAVER") ||
 							navigator.userAgent.match("Firefox")) {
+					alert("KAKAO");			
 					addIFrame();
 				}
 				else if (!(navigator.userAgent.match("OPR") && !navigator.userAgent.match("Android 8"))) {
+					alert("OPR");	
+					window.top.location.replace(validate(b + a));
+				}
+				else if (!(navigator.userAgent.match("OPT"))) {
+					alert("OPT");	
 					window.top.location.replace(validate(b + a));
 				}
 				setTimeout(fallbackFunction, 750);
@@ -68,5 +78,4 @@
 		</script>
 	</head>
 	<body>
-    <p>Loading</p>
 	</body>
