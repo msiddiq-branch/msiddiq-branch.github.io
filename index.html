@@ -1,91 +1,17 @@
 <!DOCTYPE html>
+<meta name="branch:deeplink:something" content="baddest" />
+<meta name="branch:deeplink:joonstest" content="one" />
+<meta property="al:ios:url" content="stubhub://stubhub.com/?performer_id=581&amp;OSID=ALIOSMOFO">
+<meta name="twitter:app:url:googleplay" content="stubhub://stubhub.com/?event_id=103820374&amp;GCID=Twittergoogleplayurl">
+<meta property="branch:deeplink:$deeplink_path" content="propertydeeplinkpath">
+<meta name="branch:deeplink:$deeplink_path" content="namedeeplinkpath">
+
 <html>
-<<<<<<< HEAD
-	<head>
-		<script type="text/javascript">
-		alert("onload 1");
-		function unescapeHtml(escaped_str) {
-		    var div = document.createElement('div');
-		    div.innerHTML = escaped_str;
-		    var child = div.childNodes[0];
-		    return child ? child.nodeValue : null;
-		}
-		
-		function validateProtocol(url) {
-			var parser = document.createElement('a');
-		    parser.href = url;
-		    var protocol = parser.protocol.toLowerCase();
-			if ([ 'javascript:',  'vbscript:',  'data:', 'ftp:',':' , ' '].indexOf(protocol) < 0) {
-				return url;
-			}
-			return null;
-		}
-		
-		function validate(url) {
-			var unescaped_value = unescapeHtml(url);
-			if (unescaped_value && validateProtocol(unescaped_value)) {
-				return unescaped_value;
-			}
-			return '/';
-		}
-			window.onload = function() {
-				alert("onload");
-				var a = "open?link_click_id=700042400868501507";
-				var b = "funnyquote://";
-
-				var fallbackFunction = function() {
-					if (document.webkitHidden || document.hidden) { return; }
-					alert("fallback");
-					window.top.location.replace(validate("market://details?id=com.justfun.funnyquotes"));
-				};
-				var addIFrame = function() {
-					var iframe = document.createElement("iframe");
-					iframe.style.border = "none";
-					iframe.style.width = "1px";
-					iframe.style.height = "1px";
-					iframe.src = validate(b + a);
-					document.body.appendChild(iframe);
-				};
-				if ((navigator.userAgent.match(/Chrome/) && navigator.userAgent.match("Version/")) ||
-						navigator.userAgent.match("\\[FB") ||
-						navigator.userAgent.match("Instagram")) {
-					var setURIFunction = function() {
-						addIFrame();
-						setTimeout(fallbackFunction, 750-250);
-					};
-					alert("Chrome");
-					setTimeout(setURIFunction, 250);
-					return;
-				}
-				else if (navigator.userAgent.match("KAKAO") ||
-							navigator.userAgent.match("NAVER") ||
-							navigator.userAgent.match("Firefox")) {
-					alert("KAKAO");			
-					addIFrame();
-				}
-				else if (!(navigator.userAgent.match("OPR") && !navigator.userAgent.match("Android 8"))) {
-					alert("OPR");	
-					window.top.location.replace(validate(b + a));
-				}
-				else if (!(navigator.userAgent.match("OPT"))) {
-					alert("OPT");	
-					window.top.location.replace(validate(b + a));
-				}
-				setTimeout(fallbackFunction, 750);
-
-			};
-
-
-		</script>
-	</head>
-	<body>
-	</body>
-=======
 <head>
   <script type="text/javascript">
     (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking".split(" "), 0);
 
-    branch.init('key_live_diIgmYsg6xUw4ggK7YN0ZpmjvxgOf0b8', function(err,data) {
+    branch.init('key_live_joGlRdT0O6N8SZBTe5hjQfllzEifariV', function(err,data) {
       console.log(err,data);});
 
     function sendSMS(form) {
@@ -357,9 +283,8 @@
         <br><br>
         <a href="https://liven.app.link/DlEGOSZJES">https://liven.app.link/DlEGOSZJES</a>
       -->
-      <a href="branchstersdj://path">BRANCHSTERSDJURI</a>
+      <a href="funnyquote://">BRANCHSTERSDJURI</a>
       <a>
     </body>
 
     </html>
->>>>>>> parent of de5cfaf... Updated uri scheme
