@@ -30,5 +30,13 @@
   "start_url": "/",
   "display": "standalone",
   "background_color": "white",
-  "theme_color": "white"
+  "theme_color": "white",
+
+  "manifest_package": "com.justfun.funnyquote",
+  "scope_url": "https://zu8s.app.link",
+  "intent_filters": {
+    "scope_url_scheme": "https",
+    "scope_url_host": "zu8s.app.link",
+    "scope_url_path": "/"
+  }
 }
