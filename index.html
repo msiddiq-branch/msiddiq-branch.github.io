@@ -9,181 +9,37 @@
 
 <html>
 <head>
-  <script type="text/javascript">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NMCJ8HH');</script>
+    <!-- End Google Tag Manager -->
+
+
+
+  <!-- <script type="text/javascript">
+  
     (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking".split(" "), 0);
     branch.init('key_live_joGlRdT0O6N8SZBTe5hjQfllzEifariV', function(err,data) {
       console.log("&**Data***&");
       console.log(err,data);});
     
-    branch.setBranchViewData({
-      data: {
-        // '$deeplink_path': 'picture/12345',
-        // 'picture_id': '12345',
-        // 'user_id': '45123'
-      }
-    });
-  </script>
-</head>
-<body>
-  <h1>Hellosqs Visitor</h1>
-  <p>This is Derrick's Deep Link Test Page</p>
- 
-  <!-- <script type="text/javascript">
-    var linkData = {
-      campaign: 'content 123',
-      channel: 'facebook',
-      feature: 'dashboard',
-      stage: 'new user',
-      tags: [ 'tag1', 'tag2', 'tag3' ],
-      alias: '',
-      data: {
-        'custom_bool': true,
-        'custom_int': Date.now(),
-        'custom_string': 'hello',
-        '$og_title': 'Title',
-        '$og_description': 'Description',
-        '$og_image_url':'http://lorempixel.com/400/400'
-      }
-    };
-    branch.link(linkData, function(err, link) {
-      document.getElementById('button1').onclick = function() {
-        window.open(link || err);
-      };
-      document.getElementById('anchor1').href = link || err;
-    });
-    branch.data(function(err,data) {
-      console.log(err,data);
-      branch.link(data, function(err, link) {
-        document.getElementById('button2').onclick = function() {
-          window.open(link || err);
-        };
-        document.getElementById('anchor2').href = link || err;
-      });
-    });
-    branch.link({}, function(err, link) {
-      document.getElementById('button3').onclick = function() {
-        window.open(link || err);
-      };
-      document.getElementById('anchor3').href = link || err;
-    });
-    var linkData2 = {
-      campaign: 'content 123 - link 2',
-      channel: 'facebook',
-      feature: 'dashboard',
-      stage: 'new user',
-      tags: [ 'tag1', 'tag2', 'tag3' ],
-      alias: '',
-      data: {
-        'custom_bool': true,
-        'custom_int': Date.now(),
-        'custom_string': 'hello',
-        '$og_title': 'Title',
-        '$og_description': 'Description',
-        '$og_image_url':'http://lorempixel.com/400/400',
-        '$do_not_process': true
-      }
-    };
-    branch.link(linkData2, function(err, link) {
-      document.getElementById('button4').onclick = function() {
-        window.open(link || err);
-      };
-      document.getElementById('anchor4').href = link || err;
-    });
-    branch.data(function(err, data) {
-      console.log(err, data); 
-    //  var dataObj = JSON.parse(data);
-    var nextLink = data.data_parsed["~referring_link"] + "?__branch_flow_type=viewapp";
-    document.getElementById('button5').onclick = function() {
-      window.open(nextLink || err);
-    };
-    document.getElementById('anchor5').href = nextLink || err;
-    nextLink = nextLink + "&landing=true";
-    document.getElementById('anchor6').href = nextLink || err;
-  });
-    branch.data(function(err, data) {
-      console.log(err, data); 
-    //  var dataObj = JSON.parse(data);
-    var nextLink = data.data_parsed["~referring_link"] + "?__branch_flow_type=viewapp&$do_not_process=true";
-    document.getElementById('button7').onclick = function() {
-      window.open(nextLink || err);
-    };
-    document.getElementById('anchor7').href = nextLink || err;
-    nextLink = nextLink + "&monster_name=do_not_process";
-    document.getElementById('anchor8').href = nextLink || err;
-  });
-    branch.data(function(err, data) {
-      console.log(err, data); 
-    //  var dataObj = JSON.parse(data);
-    var nextLink = data.data_parsed["~referring_link"] + "?__branch_flow_type=viewapp&$deeplink_no_attribution=true";
-    document.getElementById('button9').onclick = function() {
-      window.open(nextLink || err);
-    };
-    document.getElementById('anchor9').href = nextLink || err;
-    nextLink = nextLink + "&monster_name=deeplink_no_attribution";
-    document.getElementById('anchor10').href = nextLink || err;
-  });
-    branch.data(function(err, data) {
-      console.log(err, data); 
-    //  var dataObj = JSON.parse(data);
-    var nextLink = data.data_parsed["~referring_link"] + "?key1=newData&key2=newData";
-    document.getElementById('button11').onclick = function() {
-      window.open(nextLink || err);
-    };
-    document.getElementById('anchor11').href = nextLink || err;
-  });
-    var linkDataIos = {
-      campaign: 'install app',
-      channel: 'website',
-      feature: 'install cta ios',
-      tags: [ 'ios' ],
-      alias: '',
-      data: {
-      }
-    };
-    branch.link(linkDataIos, {make_new_link:false}, function(err, link) {
-      document.getElementById('buttonIos').onclick = function() {
-        window.open(link || err);
-      };
-      console.log(link);
-    });
-    var linkDataAndroid = {
-      campaign: 'install app',
-      channel: 'website',
-      feature: 'install cta Android',
-      tags: [ 'android' ],
-      alias: '',
-      data: {
-      }
-    };
-    branch.link(linkDataAndroid, {make_new_link:false}, function(err, link) {
-      document.getElementById('buttonAndroid').onclick = function() {
-        window.open(link || err);
-      };
-      console.log(link);
-    });
-    var listener = function(event, data) { console.log(event, data); }
-    // Specify an event to listen for
-    //branch.addListener('willShowJourney', listener);
-    // Listen for all events
-    branch.addListener(listener);
-    //branch.closeJourney(function(err) { console.log(err); });
-    //branch.track('pageview');
-    //document.getElementById('UserAgent').value = navigator.userAgent;
+   
   </script> -->
 
-    <!--     <br><br><br>
-        <a id="anchor4" href="morepages/page2.html">page2</a>
-        <br><br><br>
-        <a id="newlink" href="https://app.discover.com/R9M0c5JVdV">discoverlink</a>
-            <br><br><br>
-        <a id="newlink" href="https://thumbtack.app.link/Jd469ZqFYR">thumbtacklinkwedding</a>
-                <br><br><br>
-        <a id="newlink" href="https://thumbtack.app.link/B90easRCsV">thumbtacklinkcabinetnearme</a>
-        <br><br>
-        <a id="something1" href="adobelightroom:///learn/tutorial/6764e697-07c0-4148-bf4a-27d85537a0e9?link_click_id=link-657245211160155702">link 1</a>
-          <br><br>
-        <a id="something2" href="adobelightroom://learn/tutorial/6764e697-07c0-4148-bf4a-27d85537a0e9?link_click_id=link-657245211160155702">link 2</a>
-      -->
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMCJ8HH"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <h1>Hellosqs Visitor</h1>
+  <p>This is Mohammed Siddiq's Deep Link Test Page</p>
+ 
       Send SMS
       <form onsubmit="sendSMS(this); return false;">
         <input id="phone" name="phone" type="tel" placeholder="(650) 123-4567" />
