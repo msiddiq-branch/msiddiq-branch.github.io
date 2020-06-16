@@ -1,41 +1,305 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:700,300" rel="stylesheet" type="text/css" />
+	<style>
+		body {
+			margin: 0;
+			word-wrap: break-word;
+		}
+		/* ============ Portrait ============ */
+		.main-image {
+			width: 100%;
+			height: 250px;
+			height: 75vw;
+				background-image: url(https://cdn.branch.io/branch-assets/1565070713948-og_image.jpeg);
+			background-size: cover;
+			background-position:top center;
+		}
+		#content-container {
+			box-sizing:border-box;
+			padding: 24px;
+			margin:0 24px 0 24px;
+			background-color: #ffffff;
+		}
+		.app-title {
+			font-size: 14px;
+			padding-bottom: 11px;
+			text-transform: uppercase;
+		}
+		.card-title {
+			font-size: 33px;
+			line-height: 36px;
+		}
+		.app-content {
+			padding-top: 10px;
+			padding-bottom:100px;
+			font-size: 20px;
+		}
+		.input-wrapper {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width:100%;
+			height:110px;
+			background-color: white;
+			-webkit-box-shadow: 0px -20px 20px -8px rgba(255,255,255,1);
+			-moz-box-shadow: 0px -20px 20px -8px rgba(255,255,255,1);
+			box-shadow: 0px -20px 20px -8px rgba(255,255,255,1);
+		}
+		.input-container {
+			width:100%;
+			padding:0 24px;
+			text-align:center;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		.form-get-the-app {
+			text-align:center;
+			padding-top: 10px;
+			border-top: 2px solid #CECECE;
+		}
+		.form-get-the-app > input {
+			margin-right: 10px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			background-color: #FFFFFF;
+			border: 1px solid #979797;
+			border-radius: 2px;
+			font-size: 60px;
+			color: #CECECE;
+			line-height: 24px;
+			padding-left: 20px;
+		}
+		.input-label {
+			padding-bottom: 4px;
+			font-size: 13px;
+			padding-left: 10px;
+			padding-right: 10px;
+			overflow: hidden;
+			word-wrap: break-word;
+			padding-top: 4px;
+			text-align: center;
+		}
+		.app-icon {
+			content:" ";
+			float:left;
+			display:inline-block;
+			width:62px;
+			height: 62px;
+			line-height: 62px;
+			background-size:100% auto;
+			background-image: url(https://cdn.branch.io/branch-assets/1565070713948-og_image.jpeg);
+		}
+		.cta-button {
+			display:block;
+			height: 62px;
+			line-height:62px;
+			background-color: #444444;
+			border-radius: 2px;
+			font-size: 20px;
+			padding:0 20px;
+			margin-left:70px;
+			color: #FFFFFF;
+			text-align: center;
+			text-decoration: none;
+		}
+		/* No data (portrait) */
+		@media only screen and (orientation: portrait) {
+			.card--no-data .main-image {
+				background-image: url("http://s3-us-west-1.amazonaws.com/branch-assets/b_stripes-small.png");
+				background-size: auto;
+				background-position: top center;
+				background-repeat: repeat;
+				height: 190px;
+			}
+			.card--no-data > .app-icon {
+				position: absolute;
+				top: 160px;
+				left: 34px;
+			}
+			.card--no-data #content-container {
+				margin-top:20px;
+			}
+		}
+		@media screen /* >= iPhone 5 */
+		and (min-device-width: 321px) {
+			.input-label {
+				font-size: 14px;
+			}
+		}
+		@media only screen /* >= iPhone 6 */
+		and (min-device-width: 375px)
+		and (orientation: portrait) {
+			.main-image {
+				height:300px;
+				height: 80vw;
+			}
+			.app-content {
+				padding-bottom:120px;
+			}
+			.input-wrapper {
+				height:115px;
+			}
+		}
+		@media only screen /* >= iPhone 6+ */
+		and (min-device-width: 414px)
+		and (orientation: portrait) {
+			.main-image {
+				height:390px;
+				height: 95vw;
+			}
+		}
+		/* ============ Landscape ============ */
+		@media only screen and (orientation: landscape){
+			.main-image {
+				position:fixed;
+				height:100%;
+				height:100vh;
+				width: 50%;
+			}
+			.input-wrapper {
+				right:0;
+				left:auto;
+				width:50%;
+			}
+			#content-container {
+				float:left;
+				width:50%;
+				margin-left:50%;
+			}
+			.input-wrapper {
+				height:108px;
+			}
+			.app-content {
+				padding-bottom:110px;
+			}
+			.form-get-the-app {
+				padding-top:8px;
+			}
+			.input-container {
+				left: 50%;
+			}
+			.cta-button {
+				height: 44px;
+				line-height: 44px;
+				padding:0 5px;
+				margin-left:50px;
+			}
+			.app-icon {
+				width: 44px;
+				height: 44px;
+			}
+			/* No data (landscape) */
+			.card--no-data .main-image {
+				height: 100%;
+			}
+			.card--no-data > .app-icon {
+				display:none;
+			}
+			.card--no-data #content-container {
+				margin-top:0;
+			}
+		}
+		@media only screen /* >= iPhone 6 */
+		and (min-device-width: 645px)
+		and (orientation: landscape) {
+			.form-get-the-app {
+				padding-top:8px;
+			}
+			.cta-button {
+				height: 62px;
+				line-height: 62px;
+				padding:0 20px;
+				margin-left:70px;
+			}
+			.app-icon {
+				width: 62px;
+				height: 62px;
+				top:-2px;
+			}
+		}
+		/* Reusables */
+		.text-bold {
+			font-family: "Open Sans", Helvetica, serif;
+			font-weight: 700
+		}
+		.text-light {
+			font-family: "Open Sans", Helvetica, serif;
+			font-weight: 300;
+		}
+		.cta-button--no-app-icon {
+			margin-left:0;
+		}
 
-  <script type="text/javascript">
-    (function (b, r, a, n, c, h, _, s, d, k) { if (!b[n] || !b[n]._q) { for (; s < _.length;)c(h, _[s++]); d = r.createElement(a); d.async = 1; d.src = "https://cdn.branch.io/branch-latest.min.js"; k = r.getElementsByTagName(a)[0]; k.parentNode.insertBefore(d, k); b[n] = h } })(window, document, "script", "branch", function (b, r) { b[r] = function () { b._q.push([r, arguments]) } }, { _q: [], _v: 1 }, "addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking getBrowserFingerprintId crossPlatformIds lastAttributedTouchData".split(" "), 0);
-  </script>
-
+	</style>
 </head>
-
 <body>
-  <div id="root">
-    <p>Hellp page</p>
-  </div>
+	<div class="card center">
+		<div class="main-image"></div>
+		
+		<div id="content-container">
+			<div class="app-title text-bold">FunnyQuotes</div>
+			<div class="card-title text-light">Funny Quotes er</div>
+			<div class="app-content text-light">You can find more that 10k quotes which will make you laugh loud</div>
+		</div>
+		<div class="input-wrapper">
+			<div class="input-container">
+				<div class="input-label text-light">See this content immediately after install</div>
+				<form class="form-get-the-app">
+					<div class="app-icon">&nbsp;</div>
+					<a class="cta-button text-light">Get The App</a>
+				</form>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+function validateProtocol(url){
+   var parser = document.createElement("a");
+   parser.href = url; 
+   var protocol = parser.protocol.toLowerCase();
+   if ([ "javascript:", "vbscript:", "data:", "ftp:", ":", " "].indexOf(protocol) < 0) {
+      return url;}
+   return null;
+}
 
-  <div id="root">
-    <div class="App">
-      <header class="App-header">
-        <div>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/dashboard">Dashboard</a></li>
-          </ul>
-          <hr>
-          <div>
-            <h2>Home</h2>
-          </div>
-        </div>
-      </header>
-    </div>
-  </div>
-  <script>
-    // const branch = (window as any).branch;
-    branch.init('key_live_joGlRdT0O6N8SZBTe5hjQfllzEifariV');
-    // branch.banner({ showDesktop: false });
-  </script>
-</body>
+    function isSafariBrowser(ua) {
+      return !!/^((?!chrome|android|crios|fxios).)*safari/i.test(ua);
+    }
 
-</html>
+    function isGreaterThanVersion(ua, v) {
+      var match = /iPhone OS ([^ ]*)/i.exec(ua);
+      if (match && match[1]) {
+        try {
+          var version = match[1].replace(/_/gi, '.');
+          version = version.split('.');
+          version = parseFloat(version[0] + '.' + version[1]);
+          if (version >= v) {
+            return true;
+          }
+        } catch (e) {
+          return false;
+        }
+      }
+      return false;
+    }
+
+    function isSafari12Dot3OrGreater() {
+      var ua = navigator.userAgent;
+      var isSafari = isSafariBrowser(ua);
+
+      if (isSafari) {
+        return isGreaterThanVersion(ua, 12.3);
+      }
+
+      return false;
+    };
+          window.onload = function() {
+            window.top.location = validateProtocol("funnyquote://open?link_click_id=801411256292936025");
+            setTimeout(function timeout() {
+              if (document.webkitHidden || document.hidden) { return; };
+              window.top.location = validateProtocol("market://details?id=com.justfun.funnyquotes&_branch_match_id=801411256292936025&referrer=link_click_id%253D801411256292936025%2526utm_source%253DBranch%2526utm_campaign%253DsampleCampaign%2526utm_medium%253Dmarketing");
+            }, 750);
+          };</script></body>
