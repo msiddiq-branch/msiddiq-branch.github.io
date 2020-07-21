@@ -1,45 +1,71 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html class="mweb black_bkg">
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+		function unescapeHtml(escaped_str) {
+		    var div = document.createElement('div');
+		    div.innerHTML = escaped_str;
+		    var child = div.childNodes[0];
+		    return child ? child.nodeValue : null;
+		}
+		
+		function validateProtocol(url) {
+			var parser = document.createElement('a');
+		    parser.href = url;
+		    var protocol = parser.protocol.toLowerCase();
+			if ([ 'javascript:',  'vbscript:',  'data:', 'ftp:',':' , ' '].indexOf(protocol) < 0) {
+				return url;
+			}
+			return null;
+		}
+		
+		function validate(url) {
+			var unescaped_value = unescapeHtml(url);
+			if (unescaped_value && validateProtocol(unescaped_value)) {
+				return unescaped_value;
+			}
+			return '/';
+		}
+			window.onload = function() {
+				var a = "open?link_click_id=814116024049432584";
+				var b = "funnyquote://";
 
-<head>
-   <script type="text/javascript">var _sf_startpt = (new Date()).getTime()
-      var jsheader_primetemplate = 0;
-   </script>
-   <title>Rs 1.52 lakh crores, 13 deals: Reliance Jio&rsquo;s hot 'streak' of partnerships with Facebook, Google and
-      others | Gadgets Now</title>
-   <meta property="og:title"
-      content="Rs 1.52 lakh crores, 13 deals: Reliance Jio&rsquo;s hot 'streak' of partnerships with Facebook, Google and others | Gadgets Now">
-   <meta property="twitter:title"
-      content="Rs 1.52 lakh crores, 13 deals: Reliance Jio&rsquo;s hot 'streak' of partnerships with Facebook, Google and others | Gadgets Now">
-   <meta name="description"
-      content="At the 43rd Annual General Meeting, Reliance Industries&rsquo; MD and chairman Mukesh Ambani announced that Google is joining its &lsquo;dream team&rsquo;. In the last couple of months, Ambani-led Jio has been picking up partnerships, racking up investments and giving stake to some of the big wigs of tech town. Facebook, Qualcomm, Intel, and now Google -- all have a stake in Reliance Jio. Big or small, all in all, Reliance Jio has been on a roll and has now raised Rs 1.52 lakh crores through a total of 13 deals. Here&rsquo;s how the deals break up and we tell you how much stake do the likes of Google, Intel, Facebook have, and more importantly how much they will be spending on it: ">
-   <meta property="og:description"
-      content="At the 43rd Annual General Meeting, Reliance Industries&rsquo; MD and chairman Mukesh Ambani announced that Google is joining its &lsquo;dream team&rsquo;. In the last couple of months, Ambani-led Jio has been picking up partnerships, racking up investments and giving stake to some of the big wigs of tech town. Facebook, Qualcomm, Intel, and now Google -- all have a stake in Reliance Jio. Big or small, all in all, Reliance Jio has been on a roll and has now raised Rs 1.52 lakh crores through a total of 13 deals. Here&rsquo;s how the deals break up and we tell you how much stake do the likes of Google, Intel, Facebook have, and more importantly how much they will be spending on it: ">
-   <meta property="twitter:description"
-      content="At the 43rd Annual General Meeting, Reliance Industries&rsquo; MD and chairman Mukesh Ambani announced that Google is joining its &lsquo;dream team&rsquo;. In the last couple of months, Ambani-led Jio has been picking up partnerships, racking up investments and giving stake to some of the big wigs of tech town. Facebook, Qualcomm, Intel, and now Google -- all have a stake in Reliance Jio. Big or small, all in all, Reliance Jio has been on a roll and has now raised Rs 1.52 lakh crores through a total of 13 deals. Here&rsquo;s how the deals break up and we tell you how much stake do the likes of Google, Intel, Facebook have, and more importantly how much they will be spending on it: ">
-   
-   <!-- <meta property="twitter:url"
-      content="https://www.gadgetsnow.com/slideshows/rs-1-52-lakh-crores-13-deals-reliance-jios-hot-streak-of-partnerships-with-facebook-google-and-others/photolist/76988758.cms"> -->
-   <!-- <link rel="canonical"
-      href="https://www.gadgetsnow.com/slideshows/rs-1-52-lakh-crores-13-deals-reliance-jios-hot-streak-of-partnerships-with-facebook-google-and-others/photolist/76988758.cms"> -->
-   <!-- <link rel="amphtml"
-      href="https://www.gadgetsnow.com/slideshows/rs-1-52-lakh-crores-13-deals-reliance-jios-hot-streak-of-partnerships-with-facebook-google-and-others/amp_photolist/76988758.cms"> -->
-   <meta property="og:image" content="https://static.toiimg.com/photo/76988758.cms">
-   <meta property="twitter:image" content="https://static.toiimg.com/photo/76988758.cms">
-   <meta name="robots" content="index, follow">
+				var fallbackFunction = function() {
+					if (document.webkitHidden || document.hidden) { return; }
+					window.top.location.replace(validate("market://details?id=com.justfun.funnyquotes"));
+				};
+				var addIFrame = function() {
+					var iframe = document.createElement("iframe");
+					iframe.style.border = "none";
+					iframe.style.width = "1px";
+					iframe.style.height = "1px";
+					iframe.src = validate(b + a);
+					document.body.appendChild(iframe);
+				};
+				if ((navigator.userAgent.match(/Chrome/) && navigator.userAgent.match("Version/")) ||
+						navigator.userAgent.match("\\[FB") ||
+						navigator.userAgent.match("Instagram")) {
+					var setURIFunction = function() {
+						addIFrame();
+						setTimeout(fallbackFunction, 750-250);
+					};
+					setTimeout(setURIFunction, 250);
+					return;
+				}
+				else if (navigator.userAgent.match("KAKAO") ||
+							navigator.userAgent.match("NAVER") ||
+							navigator.userAgent.match("Firefox")) {
+					addIFrame();
+				}
+				else if (!(navigator.userAgent.match("OPR") && !navigator.userAgent.match("Android 8"))) {
+					window.top.location.replace(validate(b + a));
+				}
+				setTimeout(fallbackFunction, 750);
 
-  
-   <meta value="summary_large_image" name="twitter:card">
-   <!-- <meta value="@gadgetsnow" name="twitter:site"> -->
-   <!-- <meta content="0081e5bdb0baee4971621c8fa446c383" name="p:domain_verify"> -->
-   <!-- <link rel="shortcut icon" href="https://www.gadgetsnow.com/icons/favicon1.ico" type="image/x-icon"> -->
-   <meta id="viewport" content="width=device-width,initial-scale=1.0" name="viewport">
-   <!-- <link rel="manifest" href="/pn_manifest.cms?v=1"> -->
-   </head>
+			};
 
-<body>
 
-   <p>Sample page for meta tags</p>
-</body>
-
-</html>
+		</script>
+	</head>
+	<body>
+	</body>
