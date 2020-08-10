@@ -20,106 +20,7 @@
 
 
 
-  <script type="text/javascript">
   
-    // (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking".split(" "), 0);
-    // branch.init('key_live_knJAF6W45vSHVJiP0wn8figpqFePX59K');
-    // branch.setBranchViewData({
-    // data: {
-    //     '$deeplink_path': 'picture/12345',
-    //     'picture_id': '12345',
-    //     'user_id': '45123'
-    // }
-    // });
-    // branch.cr(); 
-
-
-    (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking getBrowserFingerprintId crossPlatformIds lastAttributedTouchData".split(" "), 0);
-
-	  branch.init('key_live_joGlRdT0O6N8SZBTe5hjQfllzEifariV', function(err, data) {
-    	// callback to handle err or data
-	});
-
-
-  var event_and_custom_data = {
-   "transaction_id": "tras_Id_1232343434",
-   "currency": "USD",
-   "revenue": 180.2,
-   "shipping": 10.5,
-   "tax": 13.5,
-   "coupon": "promo-1234",
-   "affiliation": "high_fi",
-   "description": "Preferred purchase",
-   "purchase_loc": "Palo Alto",
-   "store_pickup": "unavailable"
-};
-
-var content_items = [
-{
-   "$content_schema": "COMMERCE_PRODUCT",
-   "$og_title": "Nike Shoe",
-   "$og_description": "Start loving your steps",
-   "$og_image_url": "http://example.com/img1.jpg",
-   "$canonical_identifier": "nike/1234",
-   "$publicly_indexable": false,
-   "$price": 101.2,
-   "$locally_indexable": true,
-   "$quantity": 1,
-   "$sku": "1101123445",
-   "$product_name": "Runner",
-   "$product_brand": "Nike",
-   "$product_category": "Sporting Goods",
-   "$product_variant": "XL",
-   "$rating_average": 4.2,
-   "$rating_count": 5,
-   "$rating_max": 2.2,
-   "$creation_timestamp": 1499892854966,
-   "$exp_date": 1499892854966,
-   "$keywords": [ "sneakers", "shoes" ],
-   "$address_street": "230 South LaSalle Street",
-   "$address_city": "Chicago",
-   "$address_region": "IL",
-   "$address_country": "US",
-   "$address_postal_code": "60604",
-   "$latitude": 12.07,
-   "$longitude": -97.5,
-   "$image_captions": [ "my_img_caption1", "my_img_caption_2" ],
-   "$condition": "NEW",
-   "$custom_fields": {"foo1":"bar1","foo2":"bar2"}
-},
-{
-   "$og_title": "Nike Woolen Sox",
-   "$canonical_identifier": "nike/5324",
-   "$og_description": "Fine combed woolen sox for those who love your foot",
-   "$publicly_indexable": false,
-   "$price": 80.2,
-   "$locally_indexable": true,
-   "$quantity": 5,
-   "$sku": "110112467",
-   "$product_name": "Woolen Sox",
-   "$product_brand": "Nike",
-   "$product_category": "Apparel & Accessories",
-   "$product_variant": "Xl",
-   "$rating_average": 3.3,
-   "$rating_count": 5,
-   "$rating_max": 2.8,
-   "$creation_timestamp": 1499892854966
-}];
-
-var customer_event_alias = "my custom alias";
-
-branch.logEvent(
-   "VIEW_AD",
-   event_and_custom_data,
-   content_items,
-   customer_event_alias,
-   function(err) { 
-     console.log("******");
-     console.log(err); }
-);
-
-  // branch.crossPlatformIds();
-  </script>
 
 
 </head>
@@ -146,7 +47,112 @@ branch.logEvent(
       <p><a href="intent://open?link_click_id=Mxdlfng9B0kGGa8PW7m%2FfByj9pT8%2B1TcOsUFCTwkn9pylYRR9g93%2FD6BEMhX9u%2Fd#Intent;scheme=funnyquote;package=com.justfun.funnyquotes;S.market_referrer=link_click_id%3DMxdlfng9B0kGGa8PW7m%2FfByj9pT8%2B1TcOsUFCTwkn9pylYRR9g93%2FD6BEMhX9u%2Fd%26utm_source%3DBranch%26utm_medium%3Dmarketing;S.branch_data=%7B%22%2Burl%22%3A%22https%3A%2F%2Fbi889-siddiqn.branchbeta.link%2F4je6atKSK5%22%2C%22%24marketing_title%22%3A%22TestLink%22%2C%22~marketing%22%3Atrue%2C%22~creation_source%22%3A1%2C%22%24one_time_use%22%3Afalse%2C%22~id%22%3A%22779631190209595718%22%2C%22~feature%22%3A%22marketing%22%2C%22%2Bdomain%22%3A%22bi889-siddiqn.branchbeta.link%22%2C%22%2Bclick_timestamp%22%3A1593591464%2C%22%2Bclicked_branch_link%22%3Atrue%2C%22%2Bmatch_guaranteed%22%3Atrue%2C%22%2Bis_first_session%22%3Afalse%7D;B.branch_intent=true;end"
       >Chrome Intent Update</a></p>
       <p><a  href="market://details?id=com.clearchannel.iheartradio.controller&_branch_match_id=811940733670240873&referrer=link_click_id-811940733670240873%2526utm_source%253DBranch%2526utm_medium%253Dmarketing">Playtore uri</a></p>
+      <p id="response">hello</p>
 
+
+      <script type="text/javascript">
+  
+        // (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking".split(" "), 0);
+        // branch.init('key_live_knJAF6W45vSHVJiP0wn8figpqFePX59K');
+        // branch.setBranchViewData({
+        // data: {
+        //     '$deeplink_path': 'picture/12345',
+        //     'picture_id': '12345',
+        //     'user_id': '45123'
+        // }
+        // });
+        // branch.cr(); 
+    
+    
+        (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking getBrowserFingerprintId crossPlatformIds lastAttributedTouchData".split(" "), 0);
+    
+        branch.init('key_live_joGlRdT0O6N8SZBTe5hjQfllzEifariV', function(err, data) {
+          // callback to handle err or data
+      });
+    
+    
+      var event_and_custom_data = {
+       "transaction_id": "tras_Id_1232343434",
+       "currency": "USD",
+       "revenue": 180.2,
+       "shipping": 10.5,
+       "tax": 13.5,
+       "coupon": "promo-1234",
+       "affiliation": "high_fi",
+       "description": "Preferred purchase",
+       "purchase_loc": "Palo Alto",
+       "store_pickup": "unavailable"
+    };
+    
+    var content_items = [
+    {
+       "$content_schema": "COMMERCE_PRODUCT",
+       "$og_title": "Nike Shoe",
+       "$og_description": "Start loving your steps",
+       "$og_image_url": "http://example.com/img1.jpg",
+       "$canonical_identifier": "nike/1234",
+       "$publicly_indexable": false,
+       "$price": 101.2,
+       "$locally_indexable": true,
+       "$quantity": 1,
+       "$sku": "1101123445",
+       "$product_name": "Runner",
+       "$product_brand": "Nike",
+       "$product_category": "Sporting Goods",
+       "$product_variant": "XL",
+       "$rating_average": 4.2,
+       "$rating_count": 5,
+       "$rating_max": 2.2,
+       "$creation_timestamp": 1499892854966,
+       "$exp_date": 1499892854966,
+       "$keywords": [ "sneakers", "shoes" ],
+       "$address_street": "230 South LaSalle Street",
+       "$address_city": "Chicago",
+       "$address_region": "IL",
+       "$address_country": "US",
+       "$address_postal_code": "60604",
+       "$latitude": 12.07,
+       "$longitude": -97.5,
+       "$image_captions": [ "my_img_caption1", "my_img_caption_2" ],
+       "$condition": "NEW",
+       "$custom_fields": {"foo1":"bar1","foo2":"bar2"}
+    },
+    {
+       "$og_title": "Nike Woolen Sox",
+       "$canonical_identifier": "nike/5324",
+       "$og_description": "Fine combed woolen sox for those who love your foot",
+       "$publicly_indexable": false,
+       "$price": 80.2,
+       "$locally_indexable": true,
+       "$quantity": 5,
+       "$sku": "110112467",
+       "$product_name": "Woolen Sox",
+       "$product_brand": "Nike",
+       "$product_category": "Apparel & Accessories",
+       "$product_variant": "Xl",
+       "$rating_average": 3.3,
+       "$rating_count": 5,
+       "$rating_max": 2.8,
+       "$creation_timestamp": 1499892854966
+    }];
+    
+    var customer_event_alias = "my custom alias";
+    
+    
+    branch.logEvent(
+       "PURCHASE",
+       event_and_custom_data,
+       content_items,
+       customer_event_alias,
+       function(err) { 
+         console.log("******");
+         document.getElementById("response").innerHTML = err;
+        }
+    );
+    
+    
+      // branch.crossPlatformIds();
+      </script>
     </body>
 
     </html>
