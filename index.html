@@ -85,7 +85,7 @@
     
         (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking getBrowserFingerprintId crossPlatformIds lastAttributedTouchData".split(" "), 0);
         
-        branch.init('key_live_joGlRdT0O6N8SZBTe5hjQfllzEifariV', function(err, data) {
+        branch.init('key_live_kgTi2zWgCo0lGM9xPtTWyccmwxhdCyDR', function(err, data) {
           // callback to handle err or data
       });
     
@@ -161,16 +161,15 @@
     // var customer_event_alias = "my custom alias";
     
     
-    // branch.logEvent(
-    //    "PURCHASE",
-    //    event_and_custom_data,
-    //    content_items,
-    //    customer_event_alias,
-    //    function(err) { 
-    //      console.log("******");
-    //      document.getElementById("response").innerHTML = err;
-    //     }
-    // );
+    branch.logEvent(
+       "COMPLETE_REGISTRATION",
+       event_and_custom_data,
+       content_items,
+       function(err) { 
+         console.log("******");
+         document.getElementById("response").innerHTML = err;
+        }
+    );
     
     
       // branch.crossPlatformIds();
