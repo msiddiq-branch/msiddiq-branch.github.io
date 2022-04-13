@@ -194,21 +194,21 @@ var qrCodeLinkData = {
     }
 };
 var response = $('#qr');
-branch.qrCode(qrCodeLinkData, qrCodeSettings, function(err, qrCode) {
-    // qrCode.rawBuffer is the raw buffer
-    // qrCode.base64() is the encoded 
-    //
-    // Example img tag:
-    // <img src="data:image/png;charset=utf-8;base64,' + qrCode.base64() + '" width="500" height="500">
-    response.html("<p>Help1</p>")
+// branch.qrCode(qrCodeLinkData, qrCodeSettings, function(err, qrCode) {
+//     // qrCode.rawBuffer is the raw buffer
+//     // qrCode.base64() is the encoded 
+//     //
+//     // Example img tag:
+//     // <img src="data:image/png;charset=utf-8;base64,' + qrCode.base64() + '" width="500" height="500">
+//     response.html("<p>Help1</p>")
     
-    console.log("base64 "+qrCode.base64());
+//     console.log("base64 "+qrCode.base64());
 
-    response.html('<img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-512.png" width="500" height="500">');
+//     response.html('<img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-512.png" width="500" height="500">');
 
-    // response.html('<img src="data:image/png;charset=utf-8;base64,' + qrCode.base64() + '" width="500" height="500">');
+//     // response.html('<img src="data:image/png;charset=utf-8;base64,' + qrCode.base64() + '" width="500" height="500">');
 
-});
+// });
     
     
       // branch.crossPlatformIds();
