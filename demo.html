@@ -1,0 +1,340 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- adobe analytics script for master environment -->
+	<meta property="og:title" content="JioNews" />
+	<meta property="og:description" content="JioNews - Get Latest and Breaking News, Entertainment News, Live News, Trending Videos from India and World. Read Magazines from top publications in all the languages."
+	/>
+	<meta property="og:image" href="https://jioimages.cdn.jio.com/content/entry/jiomags/uploads/20190417171742.jpg" />
+	<meta property="fb:app_id" content="228474151382870" />
+	<meta property="og:site_name" content="Jionews" />
+	<meta property="og:url" href="https://jionews.com" />
+	<meta property="og:type" content="website" />
+	<meta charset="utf-8">
+	<meta name="title" content="JioNews: Breaking News, Latest News & Live News Videos." />
+	<meta name="description" content="Get Latest and Breaking News update, Entertainment and Live TV News from India. Read Daily Newspaper and Monthly Magazines in all the languages."
+	/>
+	<meta name="keywords" content="JioNews,Free Magazine,Free NewsPaper, Hindi,हिंदी, Tamil, தமிழ், Telugu, తెలుగు, Gujarati, Kannada,ಕನ್ನಡ, Malayalam,മലയാളം വാർത്തകൾ, Punjabi ,ਖ਼ਬਰੀ, Urdu,خبریں, Bangla,বাংলা, Marathi,मराठी, Assamese,অসমীয়া"
+	/>
+
+	<!-- twitter meta tags -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@Jionews" />
+	<meta name="twitter:creator" content="@JioNews" />
+	<meta name="twitter:title" content=" JioNews- Your News, Your Language " />
+	<meta name="twitter:description" content=" JioNews is your one stop solution for Breaking News, Live TV, trending Videos, Magazines, Newspaper & much more from the top publications in English, Hindi & other regional languages."
+	/>
+	<meta name="twitter:image" content=" https://jioimages.cdn.jio.com/media_uploads/20190423190815.jpg" />
+
+	<meta name="twitter:card" content="app" />
+	<meta name="twitter:site" content="@JioNews" />
+	<meta name="twitter:description" content="JioNews is your one stop solution for Breaking News, Live TV, trending Videos, Magazines, Newspaper & much more from the top publications in English, Hindi & other regional languages"
+	/>
+	<meta name="twitter:app:country" content="IN" />
+	<meta name="twitter:app:name:iphone" content="JioNews" />
+	<meta name="twitter:app:url:iphone" content="1067320076" />
+	<meta name="twitter:app:name:googleplay" content="JioNews" />
+	<meta name="twitter:app:id:googleplay" content=" com.jio.media.jioxpressnews" />
+
+	<title>JioNews</title>
+	<base href="/">
+	<!-- jio ads -->
+	<script src="https://mercury.akamaized.net/jioads/websdk/default/stable/jioAds.js"></script>
+
+	<!-- google Analytics -->
+	<script async="async">
+		console.log('loading new website 1.....');
+
+		if (localStorage.getItem('appVersion') !== '4.7.4') {
+			if (window.navigator && navigator.serviceWorker) {
+				console.log('unregistering service worker');
+				navigator.serviceWorker.getRegistrations()
+					.then(function (registrations) {
+						for (let registration of registrations) {
+							registration.unregister();
+						}
+					});
+			}
+			localStorage.setItem('appVersion', '4.7.4');
+		}
+		window.isGa = false;
+		// window.isAdobe = false;
+		function analyticsFnc(a) {
+			// if (a == "adobe") {
+			// 	window.isAdobe = true;
+			// 	_satellite.pageBottom();
+			// 	console.log("hello adobe" + a);
+			// }
+			if (a == "ga") {
+				if (window.ga) {
+					window.isGa = true;
+					console.log("hello ga" + a);
+					ga('create', 'UA-126411946-4', "auto");
+				}
+			}
+		}
+		function insertJS(url, n) {
+			var wzrk = document.createElement('script');
+			wzrk.onload = function () {
+
+				analyticsFnc(n)
+			}
+			wzrk.type = 'text/javascript';
+			wzrk.defer = true;
+			wzrk.src = url;
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wzrk, s);
+		}
+	</script>
+	<!-- <script src="https://jionews.com///assets.adobedtm.com/launch-ENea0b416f1a134af2900089a2a0f03784.min.js" defer="defer" onload="analyticsFnc('adobe')"></script> -->
+	<!-- <script src='https://www.google-analytics.com/analytics.js' onload="analyticsFnc('ga')" defer="defer"></script> -->
+
+	<!-- clevertap -->
+	<script type="text/javascript">
+
+	</script>
+
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<!-- <link rel="preload" href="assets/fonts/Raleway-Black.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+	<link rel="preload" href="assets/fonts/Raleway-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+	<link rel="preload" href="assets/fonts/Raleway-ExtraBold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+	<link rel="preload" href="assets/fonts/Raleway-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+	<link rel="preload" href="assets/fonts/Raleway-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+	<link rel="preload" href="assets/fonts/Raleway-SemiBold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+	<link rel="preload" href="assets/fonts/raleway-v12-latin-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="assets/fonts/raleway-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
+
+	<!-- <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700,800,900&display=swap" rel="stylesheet"> -->
+
+	<link rel="dns-prefetch" href="https://jionewsweb.cdn.jio.com/">
+	<link rel="dns-prefetch" href="https://jionewsapi.media.jio.com/">
+	<link rel="dns-prefetch" href="https://jiocdnweb.cdn.jio.com" />
+	<link rel="dns-prefetch" href="https://jiotvweb.cdn.jio.com/" />
+	<link rel="shortcut icon" type="image/png" href="icons/JioNewsAppIcon.png" />
+	<link rel="manifest" href="https://jionews.com/manifest.json">
+	<meta name="theme-color" content="#1976d2">
+	<!-- <meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0">
+	<meta http-equiv='cache-control' content='no-cache'>
+	<meta http-equiv='expires' content='0'>
+	<meta http-equiv='pragma' content='no-cache'> -->
+	<script type="text/javascript">
+		var clevertap = { event: [], profile: [], region: 'in', account: [], onUserLogin: [], notifications: [] };
+
+		// clevertap.account.push({ "id": "TEST-KKW-WWZ-Z55Z" }); // dev clevertap id
+		clevertap.account.push({ "id": "RKW-WWZ-Z55Z" }); // prod clevertap id
+		(function () {
+			console.log('clevertap---====');
+			// insertJS("//assets.adobedtm.com/launch-ENea0b416f1a134af2900089a2a0f03784.min.js", "adobe");
+			insertJS("https://www.google-analytics.com/analytics.js", "ga");
+			var wzrk = document.createElement('script');
+			wzrk.type = 'text/javascript';
+			wzrk.defer = true;
+			wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wzrk, s);
+		})();
+	</script>
+<link rel="stylesheet" href="styles.cdbf2c43a6b371aa6d95.css"><link rel="stylesheet" href="main.1c18b156d1d659995c46.css"></head>
+
+<body>
+	<app-root></app-root>
+	<noscript>Please enable JavaScript to continue using this application.</noscript>
+	<script type="text/javascript">
+		var AD_USER = {};
+		if (typeof JSInterface != "undefined") {
+			AD_USER = { userIfa: JSInterface.getAdID() };
+		}
+		var ADCALLBACK = {
+			platform : window.innerWidth < 768 ? 'ms' : 'dt'
+		};
+		window.ADSDKEXT = {};
+		// window.ADSDKEXT.click_handler = function (url) { return _this.launchBrowser(url); };
+		// var VMAXSDK = VMAXSDK || {};
+
+		// VMAXSDK.onAdError = function (placementid, error) {
+		// 	console.log(placementid, error);
+		// 	//publisher to handle error.     
+		// }
+		// VMAXSDK.onAdClose = function (placementid) {
+		// 	console.log(placementid);
+		// 	//publisher to handle the event.     
+		// }
+
+		// VMAXSDK.onAdMediaEnd = function (containerid, placementid) {
+		// 	console.log(placementid);
+		// 	//For Interstitial format, “containerid”, and “placementid” will be same.         
+		// 	//publisher to handle the event.     
+		// }
+
+		// VMAXSDK.onAdClick = function (placementid,  url) {
+		// 	if (typeof JSInterface != "undefined") {
+		// 		JSInterface.launchBrowser(url);
+		// 	}
+		// };
+
+		if (window.JioAds) {
+			JioAds.setConfiguration({
+				reqType: 'prod',
+			});
+
+			JioAds.onAdFailedToLoad = (placementId, options) => {
+				console.log('[onAdFailedToLoad: MERCURY ADS FAILED TO LOAD]');
+			}
+		}
+
+	</script>
+	<!--adobe analytics -->
+
+
+	<!-- <script type="text/javascript">_satellite.pageBottom();</script> -->
+
+	<script type="text/javascript" src="https://jionews.com/libjs/client.min.js"></script>
+	<script type="text/javascript">
+		(function () {
+			/* Analytics Event */
+			const apiUrl = 'https://collect.media.jio.com/postdata/B';
+			const time = new Date();
+			const timeStampStart = time.getTime();
+			const sourceType = new URLSearchParams(window.location.search).get('source')
+			const request = new XMLHttpRequest();
+			const client = new ClientJS();
+			const commonAnalytics = {
+				'akey': '109154006',
+				'dtpe': window.innerWidth < 768 ? 'S' : 'D',
+				'usertype': (localStorage.getItem('userType') === '1') ? 'Jio' : (localStorage.getItem('userType') === '4' || localStorage.getItem('userType') === '3') ? 'FREE TRIAL' : 'Guest',
+				'fingerprint': client.getFingerprint() || 0,
+				'uid': localStorage.getItem('uuid') || 'null',
+				'jio_id': localStorage.getItem('uid') || 'null',
+				'avn': '4.1.0',
+				'pf': client.getOS(),
+				'browser_info': client.getBrowser() + '-' + client.getBrowserVersion(),
+				'os_info': client.getOS() + '-' + client.getOSVersion(),
+				'cat': 'web',
+				'browser': client.getBrowser(),
+				'os': client.getOS(),
+				'osv': client.getOSVersion()
+			};
+			const commonAnalyticsClevertap = {
+				'dtpe': window.innerWidth < 768 ? 'S' : 'D',
+				'usertype': (localStorage.getItem('userType') === '1') ? 'Jio' : (localStorage.getItem('userType') === '4' || localStorage.getItem('userType') === '3') ? 'FREE TRIAL' : 'Guest',
+				'fingerprint': client.getFingerprint() || 0,
+				'uid': localStorage.getItem('uuid') || 'null',
+				'jio_id': localStorage.getItem('uid') ? window.btoa(localStorage.getItem('uid')) : 'null',
+				'avn': '4.1.0',
+				'pf': client.getOS(),
+				'browser_info': client.getBrowser() + '-' + client.getBrowserVersion(),
+				'os_info': client.getOS() + '-' + client.getOSVersion(),
+				'cat': 'web',
+				'browser': client.getBrowser(),
+				'os': client.getOS(),
+				'osv': client.getOSVersion()
+			};
+			const params = {
+				...commonAnalytics, ...{
+					'rtc': timeStampStart,
+					'pro': {
+						'page': window.location.href || null,
+						'appsource': sourceType || 'jionewsweb'
+					},
+					'key': 'website_visited',
+				}
+			};
+			const data = JSON.stringify(params);
+			request.open('POST', apiUrl);
+			request.setRequestHeader('Content-Type', 'application/json');
+			request.send(data);
+
+			const clevertapObj = {
+				...commonAnalyticsClevertap, ...{
+					'rtc': timeStampStart,
+					'page': window.location.href || null,
+					'appsource': sourceType || 'jionewsweb'
+				}
+			};
+			if (clevertap) {
+				// if (this.sourceType === 'jiotv') {
+				// 	alert('pp : ' + localStorage.getItem('uuid') || Constants.FINGERPRINT);
+				// }
+				clevertap.event.push(params.key, clevertapObj);
+				clevertap.profile.push({
+					'Site': {
+						'Website Version': '4.1.0',
+						'User Type': (localStorage.getItem('userType') === '1') ? 'Jio' : localStorage.getItem('socialId') ? 'FREE TRIAL' : 'Guest'
+					}
+				});
+
+				if (localStorage.getItem('uuid')) {
+					clevertap.profile.push({
+						'Site': {
+							'identity': localStorage.getItem('uuid')
+						}
+					});
+				}
+				if (localStorage.getItem('uuid')) {
+					clevertap.profile.push({
+						'Site': {
+							'identity': localStorage.getItem('uuid')
+						}
+					});
+				}
+				// setTimeout(() => {
+				// 	if (clevertap.notifications.push) {
+				// 		clevertap.notifications.push({
+				// 			'titleText': 'Would you like to receive notifications on the latest News?',
+				// 			'bodyText': 'Notifications may include newly-added News, Videos, personalized suggestions or other notices',
+				// 			'okButtonText': 'Allow',
+				// 			'rejectButtonText': 'No thanks',
+				// 			'okButtonColor': '#f28046',
+				// 			'serviceWorkerPath': 'sw.js',
+				// 			'askAgainTimeInSeconds': 15 * 60 * 1000 // 15 minutes
+				// 		});
+				// 	}
+				// }, 120000);
+			}
+		})();
+	</script>
+
+	<!-- <div id="jiosaavn-widget">
+		<div style="position:fixed;top:100%;">Listen to the
+			<a href="https://www.jiosaavn.com/featured/weekly-top-songs/8MT-LQlP35c_" target="_blank">latest songs</a>, only on
+			<a href="https://www.jiosaavn.com" target="_blank">JioSaavn.com</a>
+		</div>
+	</div> -->
+	<script>
+		(function (d, t) {
+			var s = d.createElement(t);
+			var s1 = d.createElement(t);
+			if (d.getElementById('jsw-init')) return;
+			s.setAttribute('id', 'jsw-init');
+			s.setAttribute('src', 'https://www.jiosaavn.com/embed/_s/embed.js?ver=' + Date.now());
+			s.onload = function () { s1.appendChild(d.createTextNode('JioSaavnEmbedWidget.init({a:"1", q:"1", embed_src:"https://www.jiosaavn.com/embed/playlist/49", partner_id: "JioNews", dismiss:"1"});')); d.body.appendChild(s1); };
+			if (document.readyState === 'complete') {
+				d.body.appendChild(s);
+			} else if (document.readyState === 'loading') {
+				var interval = setInterval(function () {
+					if (document.readyState === 'complete') {
+						d.body.appendChild(s);
+						clearInterval(interval);
+					}
+				}, 100);
+			} else {
+				window.onload = function () { d.body.appendChild(s); };
+			}
+		})(document, 'script');
+	</script>
+
+	<script type="application/ld+json">
+		{"@context":"http:\/\/schema.org","@type":"SiteNavigationElement","name":"Home","url":"\/"}</script>
+	<script type="application/ld+json">
+		{"@context":"http:\/\/schema.org","@type":"SiteNavigationElement","name":"News","url":"https:\/\/jionews.com\/news\/"}</script>
+	<script type="application/ld+json">
+		{"@context":"http:\/\/schema.org","@type":"SiteNavigationElement","name":"Newsstand","url":"https:\/\/jionews.com\/newsstand\/"}</script>
+	<script type="application/ld+json">
+		{"@context":"http:\/\/schema.org","@type":"SiteNavigationElement","name":"Video","url":"https:\/\/jionews.com\/video\/"}</script>
+	<script type="application/ld+json">
+		{"@context":"http:\/\/schema.org","@type":"SiteNavigationElement","name":"LIVETV","url":"https:\/\/jionews.com\/liveTv\/CNN-NEWS-18\/492\/"}</script>
+<script src="https://jionews.com/runtime-es2015.14c778b884d191fb37a1.js" type="module"></script><script src="https://jionews.com/runtime-es5.14c778b884d191fb37a1.js" nomodule defer></script><script src="https://jionews.com/polyfills-es5.0acdd5ae51ce5d1df014.js" nomodule defer></script><script src="https://jionews.com/polyfills-es2015.7c265eb63a4e5ba5cc81.js" type="module"></script><script src="https://jionews.com/scripts.9a4d8391171283e3d7a7.js" defer></script><script src="https://jionews.com/vendor-es2015.d0195c8b5d73ab67d3b1.js" type="module"></script><script src="https://jionews.com/vendor-es5.d0195c8b5d73ab67d3b1.js" nomodule defer></script><script src="https://jionews.com/main-es2015.42025f66fd5419a2c6ab.js" type="module"></script><script src="https://jionews.com/main-es5.42025f66fd5419a2c6ab.js" nomodule defer></script></body>
+
+</html>
